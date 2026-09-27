@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/86d0344b-993a-45f5-bafe-2b01755a66ce" width="1000"/>
+</div>
+
 # Clustering de Textos com Hadoop e Apache Mahout - Base Reuters (C50)
 
 Atividade prática da disciplina **Tópicos Avançados em Análise e Desenvolvimento de Sistemas II**, do curso de **Superior de Tecnologia em Análise e Desenvolvimento de Sistemas**, ministrado pela **UNIFRAN / Grupo Cruzeiro do Sul Educacional** (modalidade EAD).
@@ -35,7 +39,7 @@ reuters-clustering-hadoop-mahout/
 
 - [Docker](https://www.docker.com/products/docker-desktop/) instalado e em execução.
 
-Não é necessário instalar Java, Hadoop ou Mahout na máquina local — tudo roda isolado dentro do container.
+Não é necessário instalar Java, Hadoop ou Mahout na máquina local - tudo roda isolado dentro do container.
 
 ## ▶️ Como executar
 
@@ -84,7 +88,7 @@ rodar manualmente, comando por comando), veja [`docs/pipeline-detalhado.md`](doc
 
 O arquivo `output/saida_clusters.txt` (também disponível agora na sua máquina local após o passo 4)
 contém os 10 clusters gerados, com os termos mais representativos de cada um. A análise interpretativa
-completa desses resultados está no relatório: [`docs/Relatorio_Atividade_Pratica_Unidade_IV.docx`](docs/Relatorio_Atividade_Pratica_Unidade_IV.docx).
+completa desses resultados está no relatório: [`docs/Relatorio_Atividade_Pratica_Unidade_IV.docx`](docs/Relatorio_Atividade_Pratica_Unidade_IV.docx) - a ser adicionado após a atribuição de nota no semestre.
 
 ## 🐳 Sobre a imagem Docker
 
