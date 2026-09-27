@@ -5,7 +5,7 @@
 # Baixa a base Reuters C50, envia para o HDFS e executa o pipeline:
 #   seqdirectory -> seq2sparse -> kmeans -> clusterdump
 # =====================================================================
-set -e  # se qualquer comando desse script falhar (retornar erro), pare tudo imediatamente
+set -e
 
 DADOS_DIR=/root/dados
 SAIDA=/root/saida_clusters.txt
@@ -13,14 +13,14 @@ SAIDA=/root/saida_clusters.txt
 echo ">>> [1/5] Baixando a base Reuters C50 (UCI)..."
 mkdir -p "$DADOS_DIR"
 cd "$DADOS_DIR"
-if [ ! -d "C50" ]; then
+if [ ! -d "C50train" ]; then
   wget -q https://archive.ics.uci.edu/ml/machine-learning-databases/00217/C50.zip
   unzip -q C50.zip
 fi
 
 echo ">>> [2/5] Enviando a base para o HDFS..."
 hadoop fs -mkdir -p /C50
-hadoop fs -copyFromLocal -f "$DADOS_DIR/C50/C50train" /C50/C50train
+hadoop fs -copyFromLocal -f "$DADOS_DIR/C50train" /C50/C50train
 
 echo ">>> [3/5] Convertendo textos em SequenceFile..."
 mahout seqdirectory -i /C50/C50train -o /seqreuters -xm sequential
