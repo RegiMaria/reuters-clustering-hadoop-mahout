@@ -5,7 +5,7 @@
 # Baixa a base Reuters C50, envia para o HDFS e executa o pipeline:
 #   seqdirectory -> seq2sparse -> kmeans -> clusterdump
 # =====================================================================
-set -e
+set -e  # se qualquer comando desse script falhar (retornar erro), pare tudo imediatamente
 
 DADOS_DIR=/root/dados
 SAIDA=/root/saida_clusters.txt
